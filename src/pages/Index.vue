@@ -5,7 +5,9 @@
       active
       :todos="todos"
       :meta="meta"
-    ></example-component>
+    >
+    <datepicker/>
+    </example-component>
   </q-page>
 </template>
 
@@ -14,8 +16,13 @@ import { Todo, Meta } from 'components/models';
 import ExampleComponent from 'components/ClassComponent.vue';
 import { Vue, Component } from 'vue-property-decorator';
 
+
+
 @Component({
-  components: { ExampleComponent }
+  components: { 
+    ExampleComponent,
+
+    }
 })
 export default class PageIndex extends Vue {
   todos: Todo[] = [
