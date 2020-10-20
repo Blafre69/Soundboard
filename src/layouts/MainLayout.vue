@@ -4,6 +4,7 @@
       <q-header elevated class="bg-blue glossy text-black">
         <q-toolbar>
           <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
+          <q-btn  :ripple="false"  label='Go Back Home' to="/"/>
           <q-toolbar-title class="text-center"> Soundboard </q-toolbar-title>
         </q-toolbar>
       <q-drawer
