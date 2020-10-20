@@ -6,28 +6,42 @@
           <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
           <q-toolbar-title class="text-center"> Soundboard </q-toolbar-title>
         </q-toolbar>
-        <q-drawer 
+      <q-drawer
         v-model="drawer"
+        show-if-above
+
+        :mini="miniState"
+        @mouseover="miniState = false"
+        @mouseout="miniState = true"
+        mini-to-overlay
+
         :width="200"
-        :breakpoint="700"
+        :breakpoint="500"
         bordered
-        content-class="bg-blue-7"
-        >
+        content-class="bg-grey-3"
+      >
         <q-scroll-area class="fit">
-          <q-list>
-            <template v-for="(menuItem, index) in menuList">
-              <q-item :key="index" clickable :active="menuItem.label === 'Outbox'" v-ripple style="height: 150px">
+          <q-list bordered padding>
+              <q-item clickable  v-ripple style="height: 150px" to="/board" exact>
                 <q-item-section avatar>
-                  <q-icon :name="menuItem.icon"/>
+                  <q-icon color="primary" name="play_arrow"/>
                 </q-item-section>
-                <q-item-section>
-                  {{menuItem.label}}
-                </q-item-section>
+                <q-item-section> Board </q-item-section>
               </q-item>
-              <q-separator :key="'sep' + index"  v-if="menuItem.separator" />
-            </template>
-
-
+              <q-separator/>
+              <q-item clickable  v-ripple style="height: 150px" to="/records" exact>
+                <q-item-section avatar>
+                  <q-icon color="primary" name="mic"/>
+                </q-item-section>
+                <q-item-section> Records </q-item-section>
+              </q-item>
+              <q-separator/>              
+              <q-item clickable  v-ripple style="height: 150px" to="/settings" exact>
+                <q-item-section avatar>
+                  <q-icon color="primary" name="settings"/>
+                </q-item-section>
+                <q-item-section> Settings </q-item-section>
+              </q-item>
           </q-list>
         </q-scroll-area>
         </q-drawer>
@@ -93,6 +107,8 @@ export default {
     return {
       drawer: false,
       menuList,
+      miniState: true,
+
     }
   }
 
