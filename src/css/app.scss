@@ -1,1 +1,24 @@
 // app global css in SCSS form
+@import "quasar.variables";
+
+
+.secondary-color{
+  color: $secondary;
+}
+
+
+.home-page-container {
+  background-color: $primary;
+  height: 100vh;
+  padding: 40px;
+}
+
+.page-container {
+  height: 100vh;
+  padding: 40px;
+}
+
+.home-page-content {
+  max-width:500px;
+  //border:solid 4px;
+}
