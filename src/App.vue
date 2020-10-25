@@ -1,5 +1,5 @@
 <template>
-  <div id="q-app">
+  <div id="q-app" >
     <router-view />
   </div>
 </template>
@@ -7,7 +7,7 @@
 import { Vue, Component } from 'vue-property-decorator';
 
 @Component({
-  components: { 
+  components: {
 
 }
 })
