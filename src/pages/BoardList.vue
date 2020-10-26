@@ -2,7 +2,9 @@
   <div class="page-container">
     <q-list v-for="(item, index) in boardList"  >
         <q-item clickable :to="`/soundboard/board/${item.id}`" exact  v-ripple >
-          <q-item-section class="" >{{ item.label }}</q-item-section>
+          <q-item-section class="" >{{ item.label }}
+          </q-item-section>
+
         </q-item>
     </q-list>
   </div>

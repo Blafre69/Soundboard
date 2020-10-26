@@ -7,6 +7,7 @@
         <q-toolbar>
           <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
           <q-toolbar-title> Soundboard</q-toolbar-title>
+          <q-btn align="right" to='/'>Back Home </q-btn>
         </q-toolbar>
 
       </q-header>

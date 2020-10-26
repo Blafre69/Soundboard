@@ -47,7 +47,7 @@ export const boardsDetails: any = {
   },
 
   3: {
-    label: 'Spooky',
+    label: 'Le spooky',
     sounds: [
        { id: 1,
         label: 'chui qu\'un iench',
